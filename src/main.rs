@@ -22,7 +22,8 @@ fn main() {
     let input = File::open(input).unwrap();
     let output = File::options()
         .write(true)
-        .create(false)
+        .truncate(true)
+        .create(true)
         .open(output)
         .unwrap();
 
